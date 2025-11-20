@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  ai-trainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./experiments:/workspace/experiments
+      - ./data:/workspace/data
+      - ./models:/workspace/models
+      - ./ai_server:/workspace/ai_server
+      - ../CannaModMini/volume:/workspace/cannamini_model:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    shm_size: '8gb'
+    working_dir: /workspace/experiments/qwen25_omni_custom
+    command: bash
