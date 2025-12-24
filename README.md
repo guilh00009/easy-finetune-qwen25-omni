@@ -1,5 +1,6 @@
 # AITrainer - Fine-tuning Multimodal Models while Preserving All Capabilities
-
+#NEW FIXED VERSION MADE BY guilh00009
+#Originally made by ZaccariaDev
 [English](#english) | [Français](#français) | [Italiano](#italiano)
 
 ---
@@ -90,7 +91,7 @@ This framework solves these issues with a flexible approach that can be adapted 
 #### 1. Clone and Setup
 
 ```bash
-git clone https://github.com/yourusername/AITrainer.git
+[git clone https://github.com/yourusername/AITrainer.git](https://github.com/guilh00009/easy-finetune-qwen25-omni.git)
 cd AITrainer
 ```
 
@@ -102,7 +103,7 @@ Download Qwen2.5-Omni-3B from Hugging Face:
 mkdir -p base_model
 
 # Download using git-lfs or huggingface-cli
-huggingface-cli download Qwen/Qwen2.5-Omni-3B-Instruct --local-dir base_model
+huggingface-cli download Qwen/Qwen2.5-Omni-3B --local-dir base_model
 ```
 
 #### 3. Prepare Your Dataset
