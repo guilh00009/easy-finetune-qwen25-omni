@@ -22,8 +22,8 @@ from peft import PeftModel
 import json
 
 # Configuration
-BASE_MODEL_PATH = "../../CannaModMini/volume"  # Base Omni model
-LORA_ADAPTER_PATH = "../models/qwen_omni_finetuned_lora_FINAL"  # Fine-tuned LoRA adapters
+BASE_MODEL_PATH = "/apool/AI-Trainer/base_model"  # Base Omni model
+LORA_ADAPTER_PATH = "/apool/AI-Trainer/models/qwen_omni_finetuned_lora"  # Fine-tuned LoRA adapters
 PORT = 5000
 
 app = FastAPI(title="Growing AI Server", version="1.0.0")
