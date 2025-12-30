@@ -252,6 +252,7 @@ def finetune_omni_with_wrapper(
         enable_audio_output=False  # Disable audio synthesis during training
     )
     print("✅ Omni model loaded\n")
+    LORA_ADAPTER_PATH = "../models/qwen_omni_finetuned_lora_FINAL"  
     print(f"\n🔧 Loading LoRA adapters from {LORA_ADAPTER_PATH}...")
     thinker = base_model.thinker
     thinker_with_lora = PeftModel.from_pretrained(thinker, LORA_ADAPTER_PATH)
